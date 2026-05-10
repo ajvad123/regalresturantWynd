@@ -3,8 +3,16 @@
   "outputDirectory": "dist/client",
   "rewrites": [
     {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/api/ssr"
+      "destination": "/api/ssr?originalPath=/$1"
     }
   ],
   "headers": [
