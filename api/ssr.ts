@@ -2,7 +2,7 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   try {
-    const { default: serverHandler } = await import("../dist/server/index.js");
+    const { default: serverHandler } = await import("../src/server.ts");
 
     const origin = `http://${req.headers.host ?? "localhost"}`;
     const url = new URL(req.url || "/", origin);

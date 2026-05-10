@@ -7,6 +7,10 @@
       "destination": "/assets/$1"
     },
     {
+      "source": "/favicon.(ico|png)",
+      "destination": "/favicon.$1"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
